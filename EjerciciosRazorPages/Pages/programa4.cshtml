@@ -1,0 +1,18 @@
+﻿@page
+@model EjerciciosRazorPages.Pages.programa4Model
+@{
+}
+
+
+<h1>Programa 4</h1>
+
+@foreach(var indice in Model.Arreglo)
+{
+	<ul>
+		<li>@indice</li>
+	</ul>
+}
+<h2>Suma: @Model.Suma</h2>
+<h2>Media: @Model.Media</h2>
+<h2>Mediana: @Model.Mediana</h2>
+<h2>Moda: @Model.Moda</h2>
