@@ -2,3 +2,45 @@
 @model EjerciciosRazorPages.Pages.IMCModel
 @{
 }
+
+<h1>Calcular IMC</h1>
+<form method="post">
+	<p>Cual es tu peso?</p>
+	<input type="text" asp-for="peso" />
+
+	<p>Cual es tu altura?</p>
+	<input type="text" asp-for="altura" />
+
+	<button type="submit">Calcular</button>
+</form>
+
+
+<h2>IMC: @Model.imc</h2>
+
+
+@switch 
+(Model.imc)
+{
+	case < 18:
+		<p>Estas bajo de peso</p>
+		break;
+	case >= 18 and < 25:
+		<p>Estas en tu peso ideal</p>
+		break;
+
+	case >= 25 and < 27:
+		<p>Estas con sobrepeso</p>
+		break;
+
+	case >= 27 and < 30:
+		<p>Estas con obesidad grado 1</p>
+		break;
+
+	case >= 30 and < 40:
+		<p>Estas con obesidad grado 2</p>
+		break;
+
+	case >= 40:
+		<p>Estas con obesidad grado 3</p>
+		break;
+}

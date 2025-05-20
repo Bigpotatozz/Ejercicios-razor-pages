@@ -1,0 +1,28 @@
+﻿@page
+@model EjerciciosRazorPages.Pages.codificadorModel
+@{
+}
+
+<h1>Codificador</h1>
+
+<form method="post">
+
+	<p>Texto a codificar</p>
+	<input type="text" asp-for="Mensaje"/>
+	<p>Indica el valor de N:</p>
+	<input type="number" asp-for="n" />
+
+	<button type="submit">Codificar</button>
+</form>
+
+<h2>@Model.MensajeCodificado</h2>
+
+<form method="post" asp-page-handler= "Decodificar">
+	<p>Texto a decodificar</p>
+	<input type="text" asp-for="MensajeCodificado" />
+	<p>Indica el valor de N:</p>
+	<input type="number" asp-for="n" />
+	<button type="submit">Decodificar</button>
+</form>
+
+<h2>@Model.MensajeD</h2>
