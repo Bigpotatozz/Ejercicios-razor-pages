@@ -1,0 +1,21 @@
+﻿@page
+@model EjerciciosRazorPages.Pages.programa3Model
+@{
+}
+
+<form method="post">
+
+	<h1>Ejercicio 3</h1>
+
+	<p>A: </p> <input type="text" asp-for="A" />
+	<p>B: </p> <input type="text" asp-for="B" />
+	<p>X: </p> <input type="text" asp-for="X" />
+	<p>Y: </p> <input type="text" asp-for="Y" />
+	<p>N: </p> <input type="text" asp-for="N" />
+
+	<button type="submit">Calcular</button>
+</form>
+
+<h2>(ax + by)^n = @Model.Resultado1</h2>
+<h2>Resultado n*(n-1)(n-2)... =  @Model.Resultado2</h2>
+<h2>n! / k!(n-k)! = @Model.Resultado3</h2>
